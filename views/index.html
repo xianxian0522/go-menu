@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+<div>
+    {{.routePath}}
+    <header class="layout-header">
+        <div class="logo">logo</div>
+        <div class="header-menu">
+            <ul>
+                {{ range $i, $menu := .menus }}
+                {{ if eq $.routePath .Route }}
+                <li class="selected" style="background-color: #1890ff;">
+                    <a style="color: rgba(255, 255, 255, 0.65);" href="{{.Path}}">{{.Name}}</a>
+                </li>
+                {{ else }}
+                <li>
+                    <a style="color: rgba(255, 255, 255, 0.65);" href="{{.Path}}" >{{.Name}}</a>
+                </li>
+                {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    </header>
+    <div class="development">
+        <img src="/img/notFound.gif" alt="">
+    </div>
+</div>
+</body>
+</html>
