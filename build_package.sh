@@ -39,7 +39,7 @@ set -x
 cp -vfr ./bin/* ./$PACKAGE_NAME/bin
 
 #拷贝启动停止脚本
-cp -vfr ./stop.sh ./start.sh ./views ./public ./exportEnv.sh ./$PACKAGE_NAME
+cp -vfr ./stop.sh ./start.sh ./views ./public ./exportenv.sh ./$PACKAGE_NAME
 if [ -f "$web_file" ];then
   cp -vfr $web_file  ./$PACKAGE_NAME
 fi
