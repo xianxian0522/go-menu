@@ -1,19 +1,22 @@
 package main
 
 import (
-	"fmt"
+	"log"
+
+	"go-menu/cfg"
+	"go-menu/route"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/template/html"
-	"go-menu/route"
 )
 
 func main()  {
-	fmt.Println("menu")
-	engine := html.New("./views", ".html")
+	appSettings:= cfg.LoadConfig()
+	engine := html.New(appSettings.ViewPath, appSettings.ViewExtensions)
 	app := fiber.New(fiber.Config{ Views: engine})
 	app.Use(cors.New())
-	app.Static("/", "./public")
+	app.Static("/", appSettings.StaticPath)
 	app.Get("/api/my/bar", route.MenuHandler)
 	app.Get("/ci", route.NotFoundCiHandler)
 	app.Get("/monitor", route.NotFoundMonitorHandler)
@@ -22,5 +25,5 @@ func main()  {
 		return fiber.NewError(404, "error message")
 	})
 
-	app.Listen(":3001")
+	log.Fatal(app.Listen(":"+appSettings.Port))
 }
