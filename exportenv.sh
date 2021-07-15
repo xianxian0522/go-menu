@@ -20,8 +20,8 @@ menu:
     route: /toolbox/home
   - id: 3
     name: CICD
-    path: http://menu.dev.ops.sumscope.com:3000/ci
-    route: /ci
+    path: http://cicd-web.dev.ops.sumscope.com:7007
+    route: /cicd/biz
   - id: 4
     name: 发布系统
     path: http://deployer-web.dev.ops.sumscope.com:7006
@@ -34,6 +34,10 @@ menu:
     name: 日志中心
     path: http://menu.dev.ops.sumscope.com:3000/log
     route: /log
+  - id: 7
+    name: 登录中心
+    path: http://sso-admin.ops.sumscope.com:7005
+    route: /client
 EOF
 fi
 
@@ -56,8 +60,8 @@ menu:
     route: /toolbox/home
   - id: 3
     name: CICD
-    path: http://menu.ops.sumscope.com/ci
-    route: /ci
+    path: http://cicd-web.dev.ops.sumscope.com:7007
+    route: /cicd/biz
   - id: 4
     name: 发布系统
     path: http://deployer-web.ops.sumscope.com
@@ -70,5 +74,9 @@ menu:
     name: 日志中心
     path: http://menu.ops.sumscope.com/log
     route: /log
+  - id: 7
+    name: 登录中心
+    path: http://sso-admin.ops.sumscope.com:7005
+    route: /client
 EOF
 fi

@@ -29,3 +29,7 @@ menu:
     name: 日志中心
     path: http://menu.dev.ops.sumscope.com:3000/log
     route: /log
+  - id: 7
+    name: 登录中心
+    path: http://sso-admin.dev.ops.sumscope.com:7005
+    route: /client
