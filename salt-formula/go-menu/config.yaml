@@ -24,5 +24,5 @@ go-menu:
       DEPLOYER_PATH: http://deployer-web.ops.sumscope.com
       MONITOR_PATH: http://menu.ops.sumscope.com/monitor
       LOG_PATH: http://menu.ops.sumscope.com/log
-      SSO_PATH: http://sso-admin.ops.sumscope.com:7005
+      SSO_PATH: http://sso-admin.ops.sumscope.com
 
