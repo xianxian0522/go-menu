@@ -1,4 +1,4 @@
-cmdb-web:
+go-menu:
   envs:
     DEV:
       PORT: 3000
