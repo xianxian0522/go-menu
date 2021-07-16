@@ -14,7 +14,7 @@ temp_dir=$(date "+%Y%m%d%H%M%S")
 mkdir -p temp_dir
 
 name=$PACKAGE_NAME-$VERSION
-packageFile=$name.spm
+packageFile=$name.tar.gz
 
 
 export GOPROXY=http://172.16.97.41:9000/repository/go-proxy/
