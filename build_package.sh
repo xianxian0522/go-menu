@@ -35,7 +35,9 @@ cp -vfr ./bin/* ./$PACKAGE_NAME/bin
 
 sed -i 's/$packageName/'${PACKAGE_NAME}'/g' deploy.sls
 #拷贝启动停止脚本
-cp -vfr ./stop.sh ./start.sh ./views ./deploy.sls ./public ./$PACKAGE_NAME
+cp -vfr ./stop.sh ./start.sh ./views ./public ./$PACKAGE_NAME
+
+cp  -vfr  deploy.sls  ${saltSrc}/${PACKAGE_NAME}/deploy.sls
 
 tar zcf $packageFile  ./$PACKAGE_NAME
 
