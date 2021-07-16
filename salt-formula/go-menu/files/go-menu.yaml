@@ -1,5 +1,5 @@
 app:
-  port: { { PORT } }
+  port: {{ PORT }}
   staticPath: {{ STATIC_PATH }}
   viewPath: {{ VIEW_PATH }}
   viewExtensions: {{ VIEW_EXTENSIONS }}
