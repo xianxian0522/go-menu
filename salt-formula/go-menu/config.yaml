@@ -1,0 +1,28 @@
+cmdb-web:
+  envs:
+    DEV:
+      PORT: 3000
+      VIEW_PATH: ./views
+      VIEW_EXTENSIONS:  .html
+      STATIC_PATH:  ./public
+      OPS_PATH: http://devops-web.dev.ops.sumscope.com:7004
+      TOOLBOX_PATH: http://devops-toolbox.dev.ops.sumscope.com:7003
+      CICD_PATH: http://cicd-web.dev.ops.sumscope.com:7007
+      DEPLOYER_PATH: http://deployer-web.dev.ops.sumscope.com:7006
+      MONITOR_PATH: http://menu.dev.ops.sumscope.com:3000/monitor
+      LOG_PATH: http://menu.dev.ops.sumscope.com:3000/log
+      SSO_PATH: http://sso-admin.dev.ops.sumscope.com:7005
+
+    PROD:
+      PORT: 3000
+      STATIC_PATH:  ./public
+      VIEW_PATH: ./views
+      VIEW_EXTENSIONS: .html
+      OPS_PATH: http://devops-web.ops.sumscope.com
+      TOOLBOX_PATH: http://devops-toolbox.ops.sumscope.com
+      CICD_PATH: http://cicd-web.ops.sumscope.com
+      DEPLOYER_PATH: http://deployer-web.ops.sumscope.com
+      MONITOR_PATH: http://menu.ops.sumscope.com/monitor
+      LOG_PATH: http://menu.ops.sumscope.com/log
+      SSO_PATH: http://sso-admin.ops.sumscope.com:7005
+

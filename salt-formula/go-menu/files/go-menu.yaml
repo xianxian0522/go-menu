@@ -1,0 +1,35 @@
+app:
+  port: { { PORT } }
+  staticPath: {{ STATIC_PATH }}
+  viewPath: {{ VIEW_PATH }}
+  viewExtensions: {{ VIEW_EXTENSIONS }}
+
+menu:
+  - id: 1
+    name: 业务拓扑
+    path: {{ OPS_PATH }}
+    route: /biz/index
+  - id: 2
+    name: 运维工具箱
+    path: {{ TOOLBOX_PATH }}
+    route: /toolbox/home
+  - id: 3
+    name: CICD
+    path: {{ CICD_PATH }}
+    route: /cicd/biz
+  - id: 4
+    name: 发布系统
+    path: {{ DEPLOYER_PATH }}
+    route: /cd/biz
+  - id: 5
+    name: 监控中心
+    path: {{ MONITOR_PATH }}
+    route: /monitor
+  - id: 6
+    name: 日志中心
+    path: {{ LOG_PATH }}
+    route: /log
+  - id: 7
+    name: 登录中心
+    path: {{ SSO_PATH }}
+    route: /client
